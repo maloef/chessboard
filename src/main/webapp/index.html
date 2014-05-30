@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chessboard</title>
+<link rel='stylesheet' type='text/css' href='css/stylesheet.css' />
+<script type='text/javascript' src="js/jquery-2.0.3.js"></script>
+<script type='text/javascript' src="js/jquery-hotkeys.js"></script>
+<script type='text/javascript' src='js/chessRules.js'></script>
+<script type='text/javascript' src='js/chessParser.js'></script>
+<script type='text/javascript' src='js/chessUi.js'></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<table class='board'>
+					<tr>
+						<td class='square-desc'>8</td>
+						<td class='light square' id='a8'></td>
+						<td class='dark square' id='b8'></td>
+						<td class='light square' id='c8'></td>
+						<td class='dark square' id='d8'></td>
+						<td class='light square' id='e8'></td>
+						<td class='dark square' id='f8'></td>
+						<td class='light square' id='g8'></td>
+						<td class='dark square' id='h8'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>7</td>
+						<td class='dark square' id='a7'></td>
+						<td class='light square' id='b7'></td>
+						<td class='dark square' id='c7'></td>
+						<td class='light square' id='d7'></td>
+						<td class='dark square' id='e7'></td>
+						<td class='light square' id='f7'></td>
+						<td class='dark square' id='g7'></td>
+						<td class='light square' id='h7'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>6</td>
+						<td class='light square' id='a6'></td>
+						<td class='dark square' id='b6'></td>
+						<td class='light square' id='c6'></td>
+						<td class='dark square' id='d6'></td>
+						<td class='light square' id='e6'></td>
+						<td class='dark square' id='f6'></td>
+						<td class='light square' id='g6'></td>
+						<td class='dark square' id='h6'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>5</td>
+						<td class='dark square' id='a5'></td>
+						<td class='light square' id='b5'></td>
+						<td class='dark square' id='c5'></td>
+						<td class='light square' id='d5'></td>
+						<td class='dark square' id='e5'></td>
+						<td class='light square' id='f5'></td>
+						<td class='dark square' id='g5'></td>
+						<td class='light square' id='h5'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>4</td>
+						<td class='light square' id='a4'></td>
+						<td class='dark square' id='b4'></td>
+						<td class='light square' id='c4'></td>
+						<td class='dark square' id='d4'></td>
+						<td class='light square' id='e4'></td>
+						<td class='dark square' id='f4'></td>
+						<td class='light square' id='g4'></td>
+						<td class='dark square' id='h4'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>3</td>
+						<td class='dark square' id='a3'></td>
+						<td class='light square' id='b3'></td>
+						<td class='dark square' id='c3'></td>
+						<td class='light square' id='d3'></td>
+						<td class='dark square' id='e3'></td>
+						<td class='light square' id='f3'></td>
+						<td class='dark square' id='g3'></td>
+						<td class='light square' id='h3'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>2</td>
+						<td class='light square' id='a2'></td>
+						<td class='dark square' id='b2'></td>
+						<td class='light square' id='c2'></td>
+						<td class='dark square' id='d2'></td>
+						<td class='light square' id='e2'></td>
+						<td class='dark square' id='f2'></td>
+						<td class='light square' id='g2'></td>
+						<td class='dark square' id='h2'></td>
+					</tr>
+					<tr>
+						<td class='square-desc'>1</td>
+						<td class='dark square' id='a1'></td>
+						<td class='light square' id='b1'></td>
+						<td class='dark square' id='c1'></td>
+						<td class='light square' id='d1'></td>
+						<td class='dark square' id='e1'></td>
+						<td class='light square' id='f1'></td>
+						<td class='dark square' id='g1'></td>
+						<td class='light square' id='h1'></td>
+					</tr>
+					<tr>
+						<td />
+						<td class='square-desc'>A</td>
+						<td class='square-desc'>B</td>
+						<td class='square-desc'>C</td>
+						<td class='square-desc'>D</td>
+						<td class='square-desc'>E</td>
+						<td class='square-desc'>F</td>
+						<td class='square-desc'>G</td>
+						<td class='square-desc'>H</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<textarea id='game-area' readonly>PGN data will go here</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type='button' value='Previous move' onclick='chess.ui.board.previousMove()'/>
+				<input type='button' value='Play' onclick='chess.ui.board.play()'/>
+				<input type='button' value='Stop' onclick='chess.ui.board.stop()'/>
+				<input type='button' value='Next move' onclick='chess.ui.board.nextMove()'/>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	<div class='testDiv'>some text, to be replaced...</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+
+
+buildscript {
+	repositories {
+	    mavenCentral()
+	}
+	dependencies {
+		classpath 'org.gradle.api.plugins:gradle-cloudbees-plugin:0.1'
+	}
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    
+    runtime 'javax.servlet:jstl:1.1.2'
+
+    testCompile 'junit:junit:4.11'
+
+    //compile 'org.gradle.api.plugins:gradle-cloudbees-plugin:0.1'
+}
+
+//apply plugin: 'org.gradle.api.plugins.cloudbees.CloudBeesPlugin' // does not work!
+apply plugin: 'cloudbees'
+
+cloudBees {
+    appId = 'maloef/chessboard'
+    //dbId = ''
+}

@@ -1,0 +1,44 @@
+.board {
+	/* 	border: 1px; */
+	
+}
+
+.square {
+	height: 100px;
+	width: 100px;
+}
+
+.light {
+	background-color: #FFFFFF;
+}
+
+.dark {
+	background-color: #A4A4A4;
+}
+
+.square-desc {
+	text-align: center;
+}
+
+.piece {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#game-area {
+	width: 700px;
+	height: 845px;
+	border-style: ridge;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+#next-button {
+	background-image: url("/img/MarkusFacebook.jpg");
+	background-repeat: no-repeat;
+	width: auto; /*or your image's width*/
+	height: auto; /*or your image's height*/
+	margin: 0;
+	padding: 0;
+}
